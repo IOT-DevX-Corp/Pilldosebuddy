@@ -1,1 +1,229 @@
+# ===============================================
+# PillDoseBuddy Project - Comprehensive .gitignore
+# Covers Flutter App, Next.js Web App, and ESP32 IoT
+# ===============================================
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE and Editor files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/c_cpp_properties.json
+.vscode/.browse.c_cpp.db*
+.vscode/ipch
+.idea/
+*.iml
+*.ipr
+*.iws
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+
+# ===============================================
+# FLUTTER APP (app(flutter)/)
+# ===============================================
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+flutter_*.png
+flutter_*.ico
+
+# Flutter build outputs
+app(flutter)/build/
+app(flutter)/android/app/debug
+app(flutter)/android/app/profile
+app(flutter)/android/app/release
+
+# Flutter generated files
+app(flutter)/ios/Flutter/Generated.xcconfig
+app(flutter)/ios/Runner/GeneratedPluginRegistrant.*
+app(flutter)/macos/Flutter/GeneratedPluginRegistrant.swift
+app(flutter)/linux/flutter/generated_plugin_registrant.cc
+app(flutter)/linux/flutter/generated_plugin_registrant.h
+app(flutter)/windows/flutter/generated_plugin_registrant.cc
+app(flutter)/windows/flutter/generated_plugin_registrant.h
+
+# Android related
+app(flutter)/android/local.properties
+app(flutter)/android/key.properties
+app(flutter)/android/.gradle/
+app(flutter)/android/captures/
+app(flutter)/android/gradlew
+app(flutter)/android/gradlew.bat
+app(flutter)/android/gradle/wrapper/gradle-wrapper.jar
+
+# iOS related
+app(flutter)/ios/Pods/
+app(flutter)/ios/.symlinks/
+app(flutter)/ios/Flutter/flutter_export_environment.sh
+app(flutter)/ios/ServiceDefinitions.json
+app(flutter)/ios/Runner/GoogleService-Info.plist
+
+# Symbolication related
+app.*.symbols
+app.*.map.json
+
+# ===============================================
+# NEXT.JS WEB APP (Dosebuddy(web)/)
+# ===============================================
+
+# Dependencies
+Dosebuddy(web)/node_modules/
+Dosebuddy(web)/.pnp
+Dosebuddy(web)/.pnp.js
+
+# Next.js build outputs
+Dosebuddy(web)/.next/
+Dosebuddy(web)/out/
+Dosebuddy(web)/dist/
+Dosebuddy(web)/build/
+
+# Production builds
+Dosebuddy(web)/.vercel/
+
+# Debug logs
+Dosebuddy(web)/npm-debug.log*
+Dosebuddy(web)/yarn-debug.log*
+Dosebuddy(web)/yarn-error.log*
+Dosebuddy(web)/.pnpm-debug.log*
+
+# TypeScript
+Dosebuddy(web)/*.tsbuildinfo
+Dosebuddy(web)/next-env.d.ts
+
+# Package manager lock files (keep one, ignore others)
+# Dosebuddy(web)/package-lock.json
+# Dosebuddy(web)/yarn.lock
+
+# ===============================================
+# ESP32 IoT PROJECT (esp32/iot/)
+# ===============================================
+
+# PlatformIO
+esp32/iot/.pio/
+esp32/iot/.vscode/.browse.c_cpp.db*
+esp32/iot/.vscode/c_cpp_properties.json
+esp32/iot/.vscode/launch.json
+esp32/iot/.vscode/ipch
+
+# ESP32 specific
+esp32/iot/build/
+esp32/iot/sdkconfig
+esp32/iot/sdkconfig.old
+
+# ===============================================
+# ENVIRONMENT & SECURITY FILES
+# ===============================================
+
+# Environment variables (CRITICAL - Never commit secrets!)
+.env*
+!.env.example
+!.env.template
+
+# API Keys and secrets
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+config/secrets.json
+
+# Firebase config (if contains sensitive data)
+**/google-services.json
+**/GoogleService-Info.plist
+firebase-debug.log
+.firebase/
+
+# ===============================================
+# BUILD ARTIFACTS & RELEASES
+# ===============================================
+
+# APK files (uncomment if you want to ignore them)
+# *.apk
+# *.aab
+
+# AAR files
+*.aar
+
+# Compiled binaries
+*.bin
+*.hex
+*.elf
+
+# ===============================================
+# LOGS & TEMPORARY FILES
+# ===============================================
+
+# Log files
+*.log
+*.logs
+logs/
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Cache directories
+.cache/
+.npm/
+.eslintcache
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output/
+
+# ===============================================
+# MISCELLANEOUS
+# ===============================================
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Qodo specific
 .qodo
