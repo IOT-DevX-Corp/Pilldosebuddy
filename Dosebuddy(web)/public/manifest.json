@@ -1,0 +1,19 @@
+{
+  "name": "DoseBuddy - Smart Medication Management",
+  "short_name": "DoseBuddy",
+  "description": "Revolutionary AI-powered smart pill dispenser for automated medication management with real-time monitoring",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#00b4d8",
+  "orientation": "portrait",
+  "categories": ["health", "medical", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

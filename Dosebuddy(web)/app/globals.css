@@ -1,0 +1,397 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Medical Theme Colors inspired by the design */
+@layer base {
+  :root {
+    /* Medical Blue & Cyan Theme */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 5% 6%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Primary Medical Blue */
+    --primary: 195 100% 55%;  /* #00b4d8 - Medical Blue */
+    --primary-foreground: 0 0% 98%;
+    
+    /* Secondary Cyan */
+    --secondary: 188 100% 65%;  /* #34cbea - Medical Cyan */
+    --secondary-foreground: 220 14% 11%;
+    
+    /* Accent Medical Green */
+    --accent: 142 71% 45%;  /* #22c55e - Medical Green */
+    --accent-foreground: 0 0% 98%;
+    
+    --muted: 240 5% 10%;
+    --muted-foreground: 240 5% 64.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 195 100% 55%;
+    
+    /* Medical Chart Colors */
+    --chart-1: 195 100% 55%;  /* Medical Blue */
+    --chart-2: 188 100% 65%;  /* Medical Cyan */
+    --chart-3: 142 71% 45%;   /* Medical Green */
+    --chart-4: 45 93% 58%;    /* Medical Yellow */
+    --chart-5: 348 83% 57%;   /* Medical Red */
+    
+    --radius: 0.75rem;
+    
+    /* Medical Gradients */
+    --gradient-medical: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #10b981 100%);
+    --gradient-primary: linear-gradient(135deg, #00b4d8 0%, #34cbea 100%);
+    --gradient-secondary: linear-gradient(135deg, #34cbea 0%, #22c55e 100%);
+    
+    /* Glass Effect */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    
+    /* Shadows */
+    --shadow-medical: 0 25px 50px -12px rgba(0, 180, 216, 0.25);
+    --shadow-glow: 0 0 20px rgba(52, 203, 234, 0.3);
+  }
+
+  .light {
+    /* Light Mode Medical Theme */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    --primary: 195 100% 45%;  /* Darker medical blue for light mode */
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 188 100% 55%;
+    --secondary-foreground: 240 5.9% 10%;
+    
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 98%;
+    
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 45.1%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 195 100% 45%;
+    
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    
+    --shadow-medical: 0 25px 50px -12px rgba(0, 180, 216, 0.15);
+    --shadow-glow: 0 0 20px rgba(52, 203, 234, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/30;
+  }
+}
+
+@layer components {
+  /* Medical Glass Effect */
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+  }
+  
+  /* Medical Gradient Backgrounds */
+  .gradient-medical {
+    background: var(--gradient-medical);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  /* Medical Shadows */
+  .shadow-medical {
+    box-shadow: var(--shadow-medical);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Medical Button Styles */
+  .btn-medical {
+    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold py-3 px-6 rounded-xl shadow-medical hover:shadow-glow transition-all duration-300 transform hover:scale-105;
+  }
+  
+  /* Medical Card Styles */
+  .card-medical {
+    @apply glass-effect rounded-2xl shadow-medical hover:shadow-glow transition-all duration-300 border-primary/10;
+  }
+  
+  /* Medical Pattern Background */
+  .medical-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2334cbea' fill-opacity='0.05'%3E%3Cpath d='M30 15c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15zm0 2c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Animation utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+  
+  /* Enhanced White/Blue Theme for Vertical Dashboard */
+  .dashboard-card {
+    @apply bg-white/90 backdrop-blur-sm border-blue-100 shadow-lg hover:shadow-xl transition-all duration-200;
+  }
+  
+  .dashboard-sidebar {
+    @apply bg-white/95 backdrop-blur-sm border-r border-blue-100 shadow-lg;
+  }
+  
+  .dashboard-tab-trigger {
+    @apply w-full justify-start p-3 data-[state=active]:bg-white data-[state=active]:text-blue-900 data-[state=active]:shadow-sm transition-all duration-200;
+  }
+  
+  .dashboard-gradient-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  }
+  
+  .dashboard-gradient-card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 197, 253, 0.1) 100%);
+  }
+  
+  .status-card-success {
+    @apply bg-gradient-to-br from-green-50 to-green-100 border-green-200;
+  }
+  
+  .status-card-warning {
+    @apply bg-gradient-to-br from-yellow-50 to-yellow-100 border-yellow-200;
+  }
+  
+  .status-card-danger {
+    @apply bg-gradient-to-br from-red-50 to-red-100 border-red-200;
+  }
+  
+  .chat-message-user {
+    @apply bg-blue-600 text-white rounded-lg p-3 max-w-[80%] ml-auto;
+  }
+  
+  .chat-message-ai {
+    @apply bg-blue-50 text-blue-900 rounded-lg p-3 max-w-[80%] mr-auto;
+  }
+  
+  .medication-item {
+    @apply bg-white/90 backdrop-blur-sm border-blue-100 hover:shadow-md transition-all duration-200 rounded-lg;
+  }
+  
+  .ai-feature-card {
+    @apply bg-gradient-to-br text-white border-0 shadow-lg hover:shadow-xl transition-all duration-200;
+  }
+  
+  .quick-action-button {
+    @apply h-auto p-4 text-left border-blue-200 hover:bg-blue-50 transition-all duration-200 rounded-lg;
+  }
+  
+  /* Custom Animations */
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0px); 
+    }
+    50% { 
+      transform: translateY(-10px); 
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(52, 203, 234, 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 30px rgba(52, 203, 234, 0.6);
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(52, 203, 234, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(52, 203, 234, 0.6);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Scrollbar Styling for Chat */
+  .chat-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .chat-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+  }
+
+  .chat-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+
+  .chat-scroll::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  /* Typing indicator animation */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .typing-indicator {
+    animation: pulse 1.5s infinite;
+  }
+
+  /* Glass morphism effects */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.1);
+  }
+
+  /* Enhanced button styles */
+  .btn-primary-blue {
+    @apply bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-200;
+  }
+
+  .btn-outline-blue {
+    @apply border-blue-200 text-blue-600 hover:bg-blue-50 hover:border-blue-300 transition-all duration-200;
+  }
+}
+
+/* Focus States for Better Accessibility */
+.focus-medical:focus {
+  @apply outline-none ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-900;
+}
+
+/* Medical Button Styles */
+.btn-medical-primary {
+  @apply bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+.btn-medical-secondary {
+  @apply backdrop-blur-sm bg-white/10 border-white/20 text-white hover:bg-white/20 border rounded-xl px-6 py-3 transition-all duration-300;
+}
+
+/* Medical Card Styles */
+.medical-card {
+  @apply backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl shadow-2xl;
+  transition: all 0.3s ease;
+}
+
+.medical-card:hover {
+  @apply bg-white/20 shadow-medical;
+  transform: translateY(-2px);
+}
+
+.medical-card-header {
+  @apply bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-t-xl;
+}
+
+/* Loading Animations */
+.loading-shimmer {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
