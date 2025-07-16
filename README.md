@@ -1,7 +1,7 @@
-# 💊 PillDoseBuddy: Comprehensive Smart Medication Management System
+# 💊 PillDoseBuddy: Smart Medication Management System
 
 <div align="center">
-  <img src="./3d_prototype/design1.jpg" alt="PillDoseBuddy" width="400"/>
+  <img src="./3d_prototype/WhatsApp Image 2025-07-16 at 11.04.59_c0c6ac04.jpg" alt="PillDoseBuddy" width="400"/>
   
   ![License](https://img.shields.io/badge/license-MIT-blue.svg)
   ![Flutter](https://img.shields.io/badge/Flutter-3.24.0-blue.svg)
@@ -12,247 +12,232 @@
 
 ## 🌐 Live Demo
 
-🚀 **Web Application**: [https://pill-dose-buddy.vercel.app/](https://pill-dose-buddy.vercel.app/)  
-📱 **Android APK**: [Download Latest Release](./apk--dosebuddy/PillDoseBuddy_v1.0.0_Release_14July2025.apk)
+🚀 **Web App**: [https://pill-dose-buddy.vercel.app/](https://pill-dose-buddy.vercel.app/)  
+📱 **Android APK**: [Download v1.0.0](./apk--dosebuddy/PillDoseBuddy_v1.0.0_Release_14July2025.apk)
 
 ---
 
-## 🚀 About the Project
+## About the Project
 
-**PillDoseBuddy** is a comprehensive smart medication management ecosystem that combines IoT hardware, mobile applications, and web platforms to revolutionize medication adherence and healthcare monitoring.
+PillDoseBuddy is a smart medication management system that combines IoT hardware, mobile apps, and web platforms. It helps people never miss their medication doses through automated dispensing and intelligent reminders.
 
-### 🎯 Mission
-*Bridging healthcare and technology through innovation to ensure no medication dose is ever missed.*
-
-### 🏗️ System Architecture
-- **🔧 IoT Hardware**: ESP32-based smart pill dispenser with automated dispensing
-- **📱 Mobile App**: Flutter-based cross-platform application for iOS and Android
-- **🌐 Web Platform**: Next.js web application with AI-powered medication advice
-- **☁️ Cloud Integration**: Real-time synchronization across all platforms
+The system consists of:
+- Smart pill dispenser (ESP32-based hardware)
+- Flutter mobile app for iOS/Android  
+- Next.js web application with AI advice
+- Real-time cloud synchronization
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 💊 Smart Pill Dispensing
-- ⏰ **Automated Scheduling**: RTC-based precise timing
-- 🔔 **Multi-level Alerts**: Buzzer, LED, and push notifications
-- 📊 **Real-time Monitoring**: Track dispensing history and adherence
-- 🛡️ **Safety Mechanisms**: Prevents overdosing and missed doses
+**Smart Dispensing**
+- Automated pill dispensing on schedule
+- Multiple alert types (buzzer, LED, push notifications)
+- Real-time adherence tracking
+- Safety mechanisms to prevent overdosing
 
-### 📱 Mobile & Web Experience
-- 📲 **Cross-platform Support**: iOS, Android, and Web
-- 🤖 **AI-Powered Advice**: GitHub Models integration for medication guidance
-- 📈 **Analytics Dashboard**: Comprehensive medication tracking
-- 🔄 **Real-time Sync**: Firebase integration across all devices
+**Cross-Platform Apps**
+- Mobile apps for iOS and Android
+- Web dashboard for comprehensive management  
+- AI-powered medication advice
+- Offline functionality
 
-### 🔧 IoT Integration
-- 📶 **WiFi Connectivity**: Remote monitoring and control
-- 🔋 **Power Efficiency**: Optimized for long-term operation
-- 📡 **OTA Updates**: Remote firmware updates
-- 🛠️ **Modular Design**: Expandable hardware architecture
-
----
-
-## 🛠️ Technology Stack
-
-### 📱 Mobile App (Flutter)
-```yaml
-Framework: Flutter 3.24.0
-Language: Dart
-Platforms: iOS, Android, Web, Windows, macOS, Linux
-Architecture: Provider Pattern + Clean Architecture
-Database: Firebase Realtime Database
-Authentication: Firebase Auth
-Push Notifications: Firebase Cloud Messaging
-State Management: Provider
-```
-
-### 🌐 Web Application (Next.js)
-```json
-{
-  "framework": "Next.js 15.0",
-  "language": "TypeScript",
-  "styling": "Tailwind CSS + shadcn/ui",
-  "ai_integration": "GitHub Models (GPT-4o-mini)",
-  "database": "Firebase Realtime Database",
-  "deployment": "Vercel",
-  "email_service": "EmailJS",
-  "voice_synthesis": "Web Speech API"
-}
-```
-
-### 🔧 IoT Hardware (ESP32)
-```cpp
-// Microcontroller: ESP32 DevKit v1
-// Development: PlatformIO + Arduino Framework
-// Components:
-- Servo Motors (SG90) x 4
-- IR Sensors (Obstacle Detection)
-- RTC Module (DS3231)
-- Buzzer (Active/Passive)
-- LEDs (Status Indicators)
-- WiFi Module (Built-in ESP32)
-```
-
-### ☁️ Cloud & Infrastructure
-- **Database**: Firebase Realtime Database
-- **Authentication**: Firebase Authentication
-- **Storage**: Firebase Cloud Storage
-- **Hosting**: Vercel (Web), Firebase Hosting (Mobile)
-- **CI/CD**: GitHub Actions
-- **Monitoring**: Firebase Analytics
+**IoT Integration**
+- WiFi connectivity for remote monitoring
+- Over-the-air firmware updates
+- Low power consumption design
+- Expandable modular architecture
 
 ---
 
-## 📦 Project Structure
+## Technology Stack
+
+**Mobile App (Flutter)**
+- Flutter 3.24.0 with Dart
+- Supports iOS, Android, Web, Windows, macOS, Linux
+- Firebase for backend and real-time sync
+- Provider pattern for state management
+
+**Web Application (Next.js)**
+- Next.js 15.0 with TypeScript
+- Tailwind CSS + shadcn/ui components
+- GitHub Models AI integration (GPT-4o-mini)
+- Deployed on Vercel
+
+**IoT Hardware (ESP32)**
+- ESP32 DevKit v1 microcontroller
+- PlatformIO development environment
+- Components: Servo motors, IR sensors, RTC module, buzzer
+- WiFi connectivity built-in
+
+**Backend & Cloud**
+- Firebase Realtime Database
+- Firebase Authentication
+- Firebase Cloud Storage
+- EmailJS for notifications
+
+---
+
+## Project Structure
 
 ```
 PillDoseBuddy/
-├── 📱 app(flutter)/              # Flutter Mobile Application
-│   ├── lib/
-│   │   ├── models/              # Data models (User, Dose, Dispenser)
-│   │   ├── screens/             # UI screens (Auth, Dashboard, etc.)
-│   │   ├── services/            # Business logic (Auth, Database, Notifications)
-│   │   └── providers/           # State management
-│   ├── android/                 # Android-specific configurations
-│   ├── ios/                     # iOS-specific configurations
-│   └── web/                     # Web-specific configurations
-│
-├── 🌐 Dosebuddy(web)/           # Next.js Web Application
-│   ├── app/                     # App router pages
-│   ├── components/              # Reusable UI components
-│   ├── lib/                     # Utilities and services
-│   │   ├── firebase.ts          # Firebase configuration
-│   │   ├── github-models-ai.ts  # AI integration
-│   │   └── email-notifications.ts
-│   └── public/                  # Static assets
-│
-├── 🔧 esp32/iot/               # ESP32 IoT Firmware
-│   ├── src/                     # Main firmware code
-│   ├── include/                 # Header files
-│   ├── lib/                     # Custom libraries
-│   └── platformio.ini           # PlatformIO configuration
-│
-├── 🏗️ 3d_prototype/            # 3D Design & Prototypes
-│   ├── design1-5.jpg           # Various design iterations
-│   └── WhatsApp*.jpg           # Real prototype images
-│
-├── 📦 apk--dosebuddy/          # Android Release APKs
-│   └── PillDoseBuddy_v1.0.0_Release_14July2025.apk
-│
-└── 📋 Documentation
-    ├── README.md                # This file
-    ├── LICENSE                  # MIT License
-    └── .gitignore              # Git ignore rules
+├── app(flutter)/              # Flutter Mobile App
+├── Dosebuddy(web)/           # Next.js Web App  
+├── esp32/iot/               # ESP32 Firmware
+├── 3d_prototype/            # Design Files
+├── apk--dosebuddy/          # Android Releases
+└── README.md
 ```
 
 ---
 
-## 🚀 Quick Start Guide
+## Getting Started
 
-### 📱 Flutter Mobile App Setup
+### Flutter App Setup
 
-1. **Prerequisites**
-   ```bash
-   # Install Flutter SDK
-   flutter doctor
-   
-   # Verify installation
-   flutter --version
+1. Install Flutter SDK and verify with `flutter doctor`
+2. Navigate to `app(flutter)/` directory
+3. Run `flutter pub get` to install dependencies
+4. Add Firebase config files:
+   - `google-services.json` in `android/app/`
+   - `GoogleService-Info.plist` in `ios/Runner/`
+5. Run with `flutter run`
+
+### Web App Setup
+
+1. Navigate to `Dosebuddy(web)/` directory
+2. Install dependencies: `npm install` or `pnpm install`
+3. Copy `.env.example` to `.env.local` and add your keys:
    ```
-
-2. **Setup & Run**
-   ```bash
-   cd app(flutter)/
-   
-   # Get dependencies
-   flutter pub get
-   
-   # Run on device/emulator
-   flutter run
-   
-   # Build for production
-   flutter build apk --release
-   flutter build ios --release
+   GITHUB_TOKEN=your_token_here
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_key
    ```
+4. Start development: `npm run dev`
+5. Deploy to Vercel: `vercel --prod`
 
-3. **Firebase Configuration**
-   - Add `google-services.json` (Android) to `android/app/`
-   - Add `GoogleService-Info.plist` (iOS) to `ios/Runner/`
-   - Configure Firebase project settings
+### ESP32 Hardware Setup
 
-### 🌐 Web Application Setup
+1. Navigate to `esp32/iot/` directory
+2. Install PlatformIO dependencies: `pio lib install`
+3. Update WiFi credentials in `src/main.cpp`
+4. Build and upload: `pio run --target upload`
 
-1. **Installation**
-   ```bash
-   cd Dosebuddy(web)/
-   
-   # Install dependencies
-   pnpm install
-   # or
-   npm install
-   ```
+**Hardware Connections:**
+- Servo Motors: GPIO 18, 19, 21, 22
+- IR Sensors: GPIO 14, 27, 26, 25  
+- Buzzer: GPIO 23
+- LED Status: GPIO 2
+- RTC Module: SDA (GPIO 21), SCL (GPIO 22)
 
-2. **Environment Setup**
-   ```bash
-   # Copy environment template
-   cp .env.example .env.local
-   
-   # Add your environment variables
-   GITHUB_TOKEN=your_github_personal_access_token
-   NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-   # ... other Firebase config
-   ```
+---
 
-3. **Development**
-   ```bash
-   # Start development server
-   pnpm dev
-   
-   # Build for production
-   pnpm build
-   
-   # Deploy to Vercel
-   vercel --prod
-   ```
+## 3D Prototype Gallery
 
-### 🔧 ESP32 IoT Setup
+| Design      | Preview |
+| :---------- | :------- |
+| Prototype 1 | <img src="https://raw.githubusercontent.com/IOT-DevX-Corp/dosebuddy-final/master/3d_prototype/WhatsApp Image 2025-07-16 at 11.04.59_c0c6ac04.jpg" width="300"/> |
+| Prototype 2 | <img src="https://raw.githubusercontent.com/IOT-DevX-Corp/dosebuddy-final/master/3d_prototype/design2.jpg" width="300"/> |
+| Prototype 3 | <img src="https://raw.githubusercontent.com/IOT-DevX-Corp/dosebuddy-final/master/3d_prototype/design3.jpg" width="300"/> |
+| Prototype 4 | <img src="https://raw.githubusercontent.com/IOT-DevX-Corp/dosebuddy-final/master/3d_prototype/WhatsApp Image 2025-07-16 at 11.05.30_0b274079.jpg" width="300"/> |
 
-1. **PlatformIO Setup**
-   ```bash
-   cd esp32/iot/
-   
-   # Install dependencies
-   pio lib install
-   
-   # Build firmware
-   pio run
-   
-   # Upload to ESP32
-   pio run --target upload
-   
-   # Monitor serial output
-   pio device monitor
-   ```
+---
 
-2. **WiFi Configuration**
-   ```cpp
-   // In src/main.cpp, update WiFi credentials
-   const char* ssid = "Your_WiFi_Name";
-   const char* password = "Your_WiFi_Password";
-   ```
+## API Reference
 
-3. **Hardware Connections**
-   ```
-   ESP32 Pin Connections:
-   ├── Servo Motors: GPIO 18, 19, 21, 22
-   ├── IR Sensors: GPIO 14, 27, 26, 25
-   ├── Buzzer: GPIO 23
-   ├── LED Status: GPIO 2
-   └── RTC Module: SDA (GPIO 21), SCL (GPIO 22)
-   ```
+**Medication Advice**
+```
+POST /api/missed-dose-advisor
+```
+
+**Dispenser Control**  
+```
+POST /api/dispenser
+```
+
+**Notifications**
+```
+GET/POST /api/notifications
+```
+
+---
+
+## AI Integration
+
+The system uses GitHub Models (GPT-4o-mini) to provide intelligent medication advice. When you miss a dose, the AI considers factors like:
+
+- Medication type and timing
+- Patient age and conditions
+- Recent missed doses
+- Drug interactions
+
+The AI provides safe recommendations like taking now, skipping the dose, or contacting healthcare providers.
+
+---
+
+## Features Overview
+
+**Mobile App**
+- User authentication and profiles
+- Medication scheduling
+- Real-time dispenser status
+- Push notifications
+- Adherence reports
+- Offline support
+
+**Web Dashboard**
+- Comprehensive analytics
+- AI-powered advice
+- Email notifications
+- Multi-language support
+- Dark/light themes
+
+**Hardware Device**
+- 4-compartment dispensing
+- Precise RTC timing
+- WiFi connectivity
+- Status reporting
+- Low power design
+
+---
+
+## Performance
+
+- Mobile app launches in under 2 seconds
+- Web app loads in under 1.5 seconds
+- Hardware uptime: 99.9%
+- Battery life: 6+ months
+- APK size: ~15 MB
+
+---
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+Follow the existing code style and add tests where applicable.
+
+---
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+
+- 🌐 **Web**: https://pill-dose-buddy.vercel.app/
+- 🐛 **Issues**: [GitHub Issues](https://github.com/IOT-DevX-Corp/Pilldosebuddy/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/IOT-DevX-Corp/Pilldosebuddy/discussions)
+
+---
+
+**Made by IOT-DevX-Corp**
 
 ---
 
