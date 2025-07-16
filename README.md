@@ -258,38 +258,12 @@ PillDoseBuddy/
 
 ## 🎨 3D Prototype Gallery
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="./3d_prototype/design1.jpg" width="200"/><br/>
-        <b>Design 1 - Base Model</b>
-      </td>
-      <td align="center">
-        <img src="./3d_prototype/design2.jpg" width="200"/><br/>
-        <b>Design 2 - Compact Version</b>
-      </td>
-      <td align="center">
-        <img src="./3d_prototype/design3.jpg" width="200"/><br/>
-        <b>Design 3 - Multi-compartment</b>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <img src="./3d_prototype/design4.jpg" width="200"/><br/>
-        <b>Design 4 - Advanced Model</b>
-      </td>
-      <td align="center">
-        <img src="./3d_prototype/design5.jpg" width="200"/><br/>
-        <b>Design 5 - Final Version</b>
-      </td>
-      <td align="center">
-        <img src="./3d_prototype/WhatsApp Image 2025-07-16 at 11.04.59_c0c6ac04.jpg" width="200"/><br/>
-        <b>Real Prototype</b>
-      </td>
-    </tr>
-  </table>
-</div>
+| Design      | Preview |
+| :---------- | :------- |
+| Prototype 1 | <img src="https://raw.githubusercontent.com/IOT-DevX-Corp/dosebuddy-final/master/3d_prototype/WhatsApp Image 2025-07-16 at 11.04.59_c0c6ac04.jpg" width="300"/> |
+| Prototype 2 | <img src="https://raw.githubusercontent.com/IOT-DevX-Corp/dosebuddy-final/master/3d_prototype/design2.jpg" width="300"/> |
+| Prototype 3 | <img src="https://raw.githubusercontent.com/IOT-DevX-Corp/dosebuddy-final/master/3d_prototype/design3.jpg" width="300"/> |
+| Prototype 4 | <img src="https://raw.githubusercontent.com/IOT-DevX-Corp/dosebuddy-final/master/3d_prototype/WhatsApp Image 2025-07-16 at 11.05.30_0b274079.jpg" width="300"/> |
 
 ---
 
