@@ -1,7 +1,7 @@
 # 💊 PillDoseBuddy: Comprehensive Smart Medication Management System
 
 <div align="center">
-  <img src="./3d_prototype/design1.jpg" alt="PillDoseBuddy" width="400"/>
+  <img src="./3d_prototype/WhatsApp Image 2025-07-16 at 11.04.59_c0c6ac04.jpg" alt="PillDoseBuddy" width="400"/>
   
   ![License](https://img.shields.io/badge/license-MIT-blue.svg)
   ![Flutter](https://img.shields.io/badge/Flutter-3.24.0-blue.svg)
